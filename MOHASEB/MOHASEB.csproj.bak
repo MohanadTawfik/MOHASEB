@@ -1,0 +1,977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{788D3050-7540-42C0-A500-5BB648E6ACF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MOHASEB</RootNamespace>
+    <AssemblyName>MOHASEB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>C:\Users\USERWD\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Accordion.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.TouchlineDark.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Win11Dark.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Win11Light.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TableDependency.SqlClient, Version=8.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\TableDependency.SqlClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DB_Watcher.cs" />
+    <Compile Include="Classes\EntityOperation.cs" />
+    <Compile Include="Classes\Master.cs" />
+    <Compile Include="Classes\Session.cs" />
+    <Compile Include="Model\MOHASEBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOHASEBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MOHASEBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MOHASEBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOHASEBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Account.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Accounts_Groups.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Arguments_Accounts.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bill_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bill_Master.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bill_TypeSet.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bond_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bond_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Bond_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Buying_Command_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Buying_Commend_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Buying_Requests_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Buying_Requests_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Cash.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Company.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Cost_Calculation_TypeSet.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Currency.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Customer_Order_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Customer_Order_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Document_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Employee_Job.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Groups.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_In_Stock_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Items.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Items_Settings.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Items_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Item_Price.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Journal_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Journal_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Orders_Stock_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Orders_Stock_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Out_Stock_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Package_of_Items_Units.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Pay_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Period_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Period_Master.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Person.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Person_Phone_No.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Person_tbl_Customer.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Person_tbl_Employees.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Person_tbl_Vender.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Price_View_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Price_View_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Relation_Groups_AccountsSet.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Relation_Items_Package_Unite.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Return_Bill_Dtl.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Return_Bill_Mst.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Return_Orders_Stock_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Return_Orders_Stock_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Settelment_Stock_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Settelment_Stock_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Settel_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_SSN_IdentitySet.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_SSN_TypeSet.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Stocking_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Stocking_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Store.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_System_Records.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Transforme_Stock_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Transforms_Stock_Details.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Transforms_Stock_Header.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Unit_Stock_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_Unit_Type.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tbl_User.cs">
+      <DependentUpon>MOHASEBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Components\AccountsManagement\Operations\ctrl_Journals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Operations\ctrl_Journals.designer.cs">
+      <DependentUpon>ctrl_Journals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Arguments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Arguments.Designer.cs">
+      <DependentUpon>ctrl_Accounts_Arguments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Groups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Groups.Designer.cs">
+      <DependentUpon>ctrl_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_inventInitial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_inventInitial.Designer.cs">
+      <DependentUpon>ctrl_inventInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Items.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Items.Designer.cs">
+      <DependentUpon>ctrl_Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Price.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Price.Designer.cs">
+      <DependentUpon>ctrl_Price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Price_Modify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Price_Modify.Designer.cs">
+      <DependentUpon>ctrl_Price_Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Stocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Inputs\ctrl_Stocks.Designer.cs">
+      <DependentUpon>ctrl_Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_InStockOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_InStockOrder.Designer.cs">
+      <DependentUpon>ctrl_InStockOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_OutStockOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_OutStockOrder.Designer.cs">
+      <DependentUpon>ctrl_OutStockOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_RTInStockOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_RTInStockOrder.Designer.cs">
+      <DependentUpon>ctrl_RTInStockOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_Settlement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_Settlement.Designer.cs">
+      <DependentUpon>ctrl_Settlement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_Stocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_Stocking.Designer.cs">
+      <DependentUpon>ctrl_Stocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_TransferStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\Operations\ctrl_TransferStock.Designer.cs">
+      <DependentUpon>ctrl_TransferStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_InStockType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_InStockType.Designer.cs">
+      <DependentUpon>ctrl_InStockType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_ItemType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_ItemType.Designer.cs">
+      <DependentUpon>ctrl_ItemType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_OutStockType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_OutStockType.Designer.cs">
+      <DependentUpon>ctrl_OutStockType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_TransformeStockType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_TransformeStockType.Designer.cs">
+      <DependentUpon>ctrl_TransformeStockType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_UnitStockType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\InventoryManagment\SysInitial\ctrl_UnitStockType.Designer.cs">
+      <DependentUpon>ctrl_UnitStockType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Inputs\ctrl_SupplyData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Inputs\ctrl_SupplyData.Designer.cs">
+      <DependentUpon>ctrl_SupplyData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseBills.Designer.cs">
+      <DependentUpon>ctrl_PurchaseBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseOrders.Designer.cs">
+      <DependentUpon>ctrl_PurchaseOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseRequest.Designer.cs">
+      <DependentUpon>ctrl_PurchaseRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_RTPurchaseBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_RTPurchaseBills.Designer.cs">
+      <DependentUpon>ctrl_RTPurchaseBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_SupplyPermision.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\PurchaseManagement\Operations\ctrl_SupplyPermision.Designer.cs">
+      <DependentUpon>ctrl_SupplyPermision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_CustomerRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_CustomerRequest.Designer.cs">
+      <DependentUpon>ctrl_CustomerRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_OfferPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_OfferPrice.Designer.cs">
+      <DependentUpon>ctrl_OfferPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_RTLASTSalesBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_RTSalesBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_RTSalesBills.Designer.cs">
+      <DependentUpon>ctrl_RTSalesBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_SalesBills - Copy.Designer - Copy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_SalesBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SalesManagement\Operations\ctrl_SalesBills.Designer.cs">
+      <DependentUpon>ctrl_SalesBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\Locks\text.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\Locks\text.Designer.cs">
+      <DependentUpon>text.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\InventoryManagment\frm_Inventory_Managment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GUIs\InventoryManagment\frm_Inventory_Managment.designer.cs">
+      <DependentUpon>frm_Inventory_Managment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\PurchaseManagement\frm_Purchase_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GUIs\PurchaseManagement\frm_Purchase_Management.designer.cs">
+      <DependentUpon>frm_Purchase_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\SalesManagement\frm_Sales_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GUIs\SalesManagement\frm_Sales_Management.designer.cs">
+      <DependentUpon>frm_Sales_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\Control_Master.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\Control_Master.Designer.cs">
+      <DependentUpon>Control_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\frm_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\frm_Notification.designer.cs">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\pages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\pages.Designer.cs">
+      <DependentUpon>pages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\HeaderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PublicCompounent\HeaderPanel.Designer.cs">
+      <DependentUpon>HeaderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Cashes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Cashes.Designer.cs">
+      <DependentUpon>ctrl_Cashes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Accounts_Guide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Accounts_Guide.Designer.cs">
+      <DependentUpon>ctrl_Accounts_Guide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Open_Initial_Accounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\Inputs\ctrl_Open_Initial_Accounts.Designer.cs">
+      <DependentUpon>ctrl_Open_Initial_Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Groups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Groups.Designer.cs">
+      <DependentUpon>ctrl_Accounts_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Period.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\AccountsManagement\SysInitial\ctrl_Period.Designer.cs">
+      <DependentUpon>ctrl_Period.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\frm_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Components\frm_Search.designer.cs">
+      <DependentUpon>frm_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\Company.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\Company.Designer.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\ctrl_Currencies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\ctrl_Currencies.Designer.cs">
+      <DependentUpon>ctrl_Currencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\Customers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\SSN_Identities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\SystemManagement\SysInitial\SSN_Identities.Designer.cs">
+      <DependentUpon>SSN_Identities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\AccountsManagement\frm_Accounts_Managment.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Views\GUIs\AccountsManagement\frm_Accounts_Managment.designer.cs">
+      <DependentUpon>frm_Accounts_Managment.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Views\GUIs\MOHASEBMain\frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GUIs\MOHASEBMain\frm_Main.designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\MOHASEBMain\Login\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GUIs\MOHASEBMain\Login\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GUIs\SystemManagement\frm_System_Management.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Views\GUIs\SystemManagement\frm_System_Management.designer.cs">
+      <DependentUpon>frm_System_Management.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\Operations\ctrl_Journals.resx">
+      <DependentUpon>ctrl_Journals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Arguments.resx">
+      <DependentUpon>ctrl_Accounts_Arguments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_Groups.resx">
+      <DependentUpon>ctrl_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_inventInitial.resx">
+      <DependentUpon>ctrl_inventInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_Items.resx">
+      <DependentUpon>ctrl_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_Price.resx">
+      <DependentUpon>ctrl_Price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_Price_Modify.resx">
+      <DependentUpon>ctrl_Price_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Inputs\ctrl_Stocks.resx">
+      <DependentUpon>ctrl_Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_InStockOrder.resx">
+      <DependentUpon>ctrl_InStockOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_OutStockOrder.resx">
+      <DependentUpon>ctrl_OutStockOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_RTInStockOrder.resx">
+      <DependentUpon>ctrl_RTInStockOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_Settlement.resx">
+      <DependentUpon>ctrl_Settlement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_Stocking.resx">
+      <DependentUpon>ctrl_Stocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\Operations\ctrl_TransferStock.resx">
+      <DependentUpon>ctrl_TransferStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\SysInitial\ctrl_InStockType.resx">
+      <DependentUpon>ctrl_InStockType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\SysInitial\ctrl_ItemType.resx">
+      <DependentUpon>ctrl_ItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\SysInitial\ctrl_OutStockType.resx">
+      <DependentUpon>ctrl_OutStockType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\SysInitial\ctrl_TransformeStockType.resx">
+      <DependentUpon>ctrl_TransformeStockType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\InventoryManagment\SysInitial\ctrl_UnitStockType.resx">
+      <DependentUpon>ctrl_UnitStockType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Inputs\ctrl_SupplyData.resx">
+      <DependentUpon>ctrl_SupplyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseBills.resx">
+      <DependentUpon>ctrl_PurchaseBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseOrders.resx">
+      <DependentUpon>ctrl_PurchaseOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Operations\ctrl_PurchaseRequest.resx">
+      <DependentUpon>ctrl_PurchaseRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Operations\ctrl_RTPurchaseBills.resx">
+      <DependentUpon>ctrl_RTPurchaseBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\PurchaseManagement\Operations\ctrl_SupplyPermision.resx">
+      <DependentUpon>ctrl_SupplyPermision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SalesManagement\Operations\ctrl_CustomerRequest.resx">
+      <DependentUpon>ctrl_CustomerRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SalesManagement\Operations\ctrl_OfferPrice.resx">
+      <DependentUpon>ctrl_OfferPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SalesManagement\Operations\ctrl_RTLASTSalesBills.resx">
+      <DependentUpon>ctrl_RTLASTSalesBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SalesManagement\Operations\ctrl_RTSalesBills.resx">
+      <DependentUpon>ctrl_RTSalesBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SalesManagement\Operations\ctrl_SalesBills.resx">
+      <DependentUpon>ctrl_SalesBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SystemManagement\Locks\text.resx">
+      <DependentUpon>text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\InventoryManagment\frm_Inventory_Managment.resx">
+      <DependentUpon>frm_Inventory_Managment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\PurchaseManagement\frm_Purchase_Management.resx">
+      <DependentUpon>frm_Purchase_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\SalesManagement\frm_Sales_Management.resx">
+      <DependentUpon>frm_Sales_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublicCompounent\Control_Master.resx">
+      <DependentUpon>Control_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublicCompounent\frm_Notification.resx">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublicCompounent\pages.resx">
+      <DependentUpon>pages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublicCompounent\HeaderPanel.resx">
+      <DependentUpon>HeaderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\Inputs\ctrl_Cashes.resx">
+      <DependentUpon>ctrl_Cashes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\Inputs\ctrl_Accounts_Guide.resx">
+      <DependentUpon>ctrl_Accounts_Guide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\Inputs\ctrl_Open_Initial_Accounts.resx">
+      <DependentUpon>ctrl_Open_Initial_Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\SysInitial\ctrl_Accounts_Groups.resx">
+      <DependentUpon>ctrl_Accounts_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\AccountsManagement\SysInitial\ctrl_Period.resx">
+      <DependentUpon>ctrl_Period.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\frm_Search.resx">
+      <DependentUpon>frm_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SystemManagement\SysInitial\Company.resx">
+      <DependentUpon>Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SystemManagement\SysInitial\ctrl_Currencies.resx">
+      <DependentUpon>ctrl_Currencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SystemManagement\SysInitial\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\SystemManagement\SysInitial\SSN_Identities.resx">
+      <DependentUpon>SSN_Identities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\AccountsManagement\frm_Accounts_Managment.resx">
+      <DependentUpon>frm_Accounts_Managment.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\MOHASEBMain\frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\MOHASEBMain\Login\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GUIs\SystemManagement\frm_System_Management.resx">
+      <DependentUpon>frm_System_Management.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\MOHASEBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MOHASEBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\MOHASEBModel.edmx.diagram">
+      <DependentUpon>MOHASEBModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Account.datasource" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Accounts_Groups.datasource" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Acc_Report.datasource" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Cash.datasource" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Currency.datasource" />
+    <None Include="Properties\DataSources\MOHASEB.Model.tbl_Relation_Accounts_currencies.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\MOHASEBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MOHASEBModel.Context.cs</LastGenOutput>
+      <DependentUpon>MOHASEBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\MOHASEBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MOHASEBModel.edmx</DependentUpon>
+      <LastGenOutput>MOHASEBModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\Shutdown_35px.png" />
+    <None Include="Resources\Shutdown_40px.png" />
+    <None Include="Resources\icons8_Company_100px.png" />
+    <None Include="Resources\icons8_Unavailable_48px.png" />
+    <None Include="Resources\icons8_Ok_52px.png" />
+    <None Include="Resources\icons8_Error_52px.png" />
+    <None Include="Resources\icons8_Printer_Error_50px.png" />
+    <None Include="Resources\icons8_Info_52px_1.png" />
+    <None Include="Resources\icons8_Company_50px.png" />
+    <None Include="Resources\icons8_Calendar_48px.png" />
+    <None Include="Resources\icons8_Password_52px.png" />
+    <None Include="Resources\icons8_User_50px.png" />
+    <None Include="Resources\icons8_Add_User_Male_64px.png" />
+    <None Include="Resources\icons8_Combo_Chart_48px.png" />
+    <None Include="Resources\icons8_Cancel_104px.png" />
+    <None Include="Resources\icons8_Books_52px.png" />
+    <None Include="Resources\icons8_Age_96px.png" />
+    <None Include="Resources\frm_btn_yellow_16.png" />
+    <None Include="Resources\frm_btn_yellow.png" />
+    <None Include="Resources\frm_btn_red.png" />
+    <None Include="Resources\frm_btn_green.png" />
+    <None Include="Resources\Computer login-amico.png" />
+    <None Include="Resources\Annotation 2023-07-26 005730.png" />
+    <None Include="Resources\Afatar.jpg" />
+    <None Include="Resources\Shutdown_hover.png" />
+    <None Include="Resources\Shutdown.png" />
+    <None Include="Resources\MyLogo.png" />
+    <None Include="Resources\Mohaseb_LOGO.png" />
+    <None Include="Resources\MOHASEB.png" />
+    <None Include="Resources\looding.gif" />
+    <None Include="Resources\LOGO.png" />
+    <None Include="Resources\Loading-pana.png" />
+    <None Include="Resources\icons8_Shutdown_96px.png" />
+    <None Include="Resources\icons8_Shutdown_52px_1.png" />
+    <None Include="Resources\icons8_Shutdown_52px.png" />
+    <None Include="Resources\icons8_Shopping_Cart_24px.png" />
+    <None Include="Resources\icons8_Settings_48px.png" />
+    <None Include="Resources\icons8_Price_Tag_52px.png" />
+    <None Include="Resources\icons8_Ok_96px_1.png" />
+    <None Include="Resources\icons8_Ok_96px.png" />
+    <None Include="Resources\icons8_Land_Sales_50px.png" />
+    <None Include="Resources\icons8_Info_104px.png" />
+    <None Include="Resources\icons8_Error_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Components\AccountsManagement\Post\" />
+    <Folder Include="Views\Components\AccountsManagement\Reports\" />
+    <Folder Include="Views\Components\PurchaseManagement\SysInitial\" />
+    <Folder Include="Views\Components\SalesManagement\Inputs\" />
+    <Folder Include="Views\Components\SalesManagement\SysInitial\" />
+    <Folder Include="Views\Components\SystemManagement\CancelPost\" />
+    <Folder Include="Views\Components\SystemManagement\SystemMainteneance\" />
+    <Folder Include="Views\Components\SystemManagement\Users\" />
+    <Folder Include="Views\GUIs\MOHASEBMain\Startup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

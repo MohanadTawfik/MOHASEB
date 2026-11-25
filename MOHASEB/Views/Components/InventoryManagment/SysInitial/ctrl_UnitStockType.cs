@@ -1,0 +1,195 @@
+﻿using DevExpress.XtraEditors;
+using MOHASEB.Classes;
+using MOHASEB.Model;
+using MOHASEB.Views.PublicCompounent;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MOHASEB.Views.Components.InventoryManagment.SysInitial
+{
+    public partial class ctrl_UnitStockType : Control_Master
+    {
+
+        MOHASEB.Model.MOHASEB_DBEntities db;
+        private tbl_Unit_Stock_Type table;
+        EntityOperation.Operation operation;
+
+        int id = 0;
+
+        public ctrl_UnitStockType()
+        {
+            InitializeComponent();
+            RefreshData();
+            table = new tbl_Unit_Stock_Type();
+        }
+
+    
+
+        public  override void RefreshData()
+        {
+            base.RefreshData();
+            MOHASEB.Model.MOHASEB_DBEntities db = new MOHASEB.Model.MOHASEB_DBEntities();
+            // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
+            db.tbl_Unit_Stock_Type.LoadAsync().ContinueWith(loadTask =>
+            {
+                // Bind data to control when loading complete
+                sysdiagramsBindingSource.DataSource = db.tbl_Unit_Stock_Type.Local.ToBindingList();
+            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+
+
+
+
+        }
+
+
+        public override void Save()
+        {
+
+            SetData();
+
+            if (operation == EntityOperation.Operation.Delete)
+            {
+
+                EntityOperation.SqlOperationAsync<tbl_Unit_Stock_Type>(new tbl_Unit_Stock_Type { UnitStockType_No = id }, EntityOperation.Operation.Delete);
+            } else
+                 EntityOperation.SqlOperationAsync<tbl_Unit_Stock_Type>(table, operation);
+
+
+           base.Save();
+        }
+
+        public override void New()
+        {
+            operation = EntityOperation.Operation.Add;
+            txt_unit_name.Focus();
+            base.New();
+        }
+
+        public override void Edit()
+        {
+         
+            if (table == null)
+            {
+                new frm_Notification().ShowAlert("لا بيانات لتعديلها", frm_Notification.AlertType.Error);
+                return;
+            }
+
+            operation = EntityOperation.Operation.Update;
+            EnableFields(true);
+            base.Edit();
+        }
+
+        public override void GetData()
+        {
+             id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("UnitStockType_No"));
+             txt_unit_name.Text = gridView1.GetFocusedRowCellValue("UnitStockType_Name").ToString();
+             txt_unit_symbol.Text = gridView1.GetFocusedRowCellValue("UnitStockType_Sample").ToString();
+
+            base.GetData();
+        }
+
+        public override void SetData()
+        {
+
+            table = new tbl_Unit_Stock_Type();
+            if (operation == EntityOperation.Operation.Update)
+            {
+                table.UnitStockType_No = id;
+
+            }
+
+            table.UnitStockType_Name = txt_unit_name.Text;
+            table.UnitStockType_Sample = txt_unit_symbol.Text;
+
+      
+
+            base.SetData();
+        }
+
+        public override void Delete()
+        {
+
+            if (table == null)
+            {
+                new frm_Notification().ShowAlert("لا بيانات لحذفها", frm_Notification.AlertType.Error);
+                return;
+            }
+            operation = EntityOperation.Operation.Delete;
+            base.Delete();
+        }
+
+        public override void EnableFields(bool enable)
+        {
+            // Enable Texts Boxes
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Enabled = enable;
+                }
+            }
+
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Enabled = enable;
+                }
+            }
+
+            base.EnableFields(enable);
+        }
+
+        public override void ClearFields(bool enable)
+        {
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Text = string.Empty;
+                }
+            }
+
+            base.ClearFields(enable);
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void chk_is_measur_CheckedChanged(object sender, EventArgs e)
+        {
+            cmb_unit_type.Enabled = chk_is_measur.Checked;
+        }
+
+        // This event is generated by Data Source Configuration Wizard
+        void entityInstantFeedbackSource1_GetQueryable(object sender, DevExpress.Data.Linq.GetQueryableEventArgs e)
+        {
+            // Instantiate a new DataContext
+            db = new MOHASEB.Model.MOHASEB_DBEntities();
+            // Assign a queryable source to the EntityInstantFeedbackSource
+            e.QueryableSource = db.tbl_Unit_Stock_Type;
+            // Assign the DataContext to the Tag property,
+            // to dispose of it in the DismissQueryable event handler
+            e.Tag = db;
+        }
+
+        // This event is generated by Data Source Configuration Wizard
+        void entityInstantFeedbackSource1_DismissQueryable(object sender, DevExpress.Data.Linq.GetQueryableEventArgs e)
+        {
+            // Dispose of the DataContext
+            ((MOHASEB.Model.MOHASEB_DBEntities)e.Tag).Dispose();
+        }
+    }
+
+}

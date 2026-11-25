@@ -1,0 +1,186 @@
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
+using MOHASEB.Classes;
+using MOHASEB.Model;
+using MOHASEB.Views.PublicCompounent;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MOHASEB.Views.Components.InventoryManagment.SysInitial
+{
+    public partial class ctrl_TransformeStockType :Control_Master
+    {
+
+        MOHASEB.Model.MOHASEB_DBEntities db;
+        private tbl_Transforme_Stock_Type table;
+        EntityOperation.Operation operation;
+
+        int id = 0;
+        public ctrl_TransformeStockType()
+        {
+            InitializeComponent();
+            RefreshData();
+            table = new tbl_Transforme_Stock_Type();
+
+        }
+
+
+       
+        public override void RefreshData()
+        {
+            base.RefreshData();
+            MOHASEB.Model.MOHASEB_DBEntities db = new MOHASEB.Model.MOHASEB_DBEntities();
+            // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
+            db.tbl_Transforme_Stock_Type.LoadAsync().ContinueWith(loadTask =>
+            {
+                // Bind data to control when loading complete
+                sysdiagramsBindingSource.DataSource = db.tbl_Transforme_Stock_Type.Local.ToBindingList();
+            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        public override void Save()
+        {
+
+            SetData();
+
+            if (operation == EntityOperation.Operation.Delete)
+            {
+
+                EntityOperation.SqlOperationAsync<tbl_Transforme_Stock_Type>(new tbl_Transforme_Stock_Type { TransStockType_No = id }, EntityOperation.Operation.Delete);
+            }
+            else
+               EntityOperation.SqlOperationAsync<tbl_Transforme_Stock_Type>(table, operation);
+
+
+            base.Save();
+        }
+
+        public override void New()
+        {
+            operation = EntityOperation.Operation.Add;
+            txt_type_name.Focus();
+            base.New();
+        }
+
+        public override void Edit()
+        {
+           
+            if (table == null)
+            {
+                new frm_Notification().ShowAlert("لا بيانات لتعديلها", frm_Notification.AlertType.Error);
+                return;
+            }
+
+            operation = EntityOperation.Operation.Update;
+            EnableFields(true);
+            base.Edit();
+        }
+
+        public override void GetData()
+        {
+           
+            base.GetData();
+            id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("TransStockType_No"));
+            txt_type_name.Text = gridView1.GetFocusedRowCellValue("TransStockType_Name").ToString();
+           rg.SelectedIndex = int.Parse(gridView1.GetFocusedRowCellValue("TransStockType_IN_Out").ToString());
+        }
+
+        public override void SetData()
+        {
+            base.SetData();
+
+            table = new tbl_Transforme_Stock_Type();
+            
+                if (operation == EntityOperation.Operation.Update)
+                {
+                    table.TransStockType_No = id;
+
+                } 
+                table.TransStockType_Name = txt_type_name.Text;
+                    
+                table.TransStockType_IN_Out = rg.SelectedIndex;
+        }
+
+        public override void Delete()
+        {
+        
+            if (table == null)
+            {
+                new frm_Notification().ShowAlert("لا بيانات لحذفها", frm_Notification.AlertType.Error);
+                return;
+            }
+            operation = EntityOperation.Operation.Delete;
+            base.Delete();
+        }
+
+        public override void EnableFields(bool enable)
+        {
+            // Enable Texts Boxes
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Enabled = enable;
+                }
+            }
+
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Enabled = enable;
+                }
+            }
+
+            base.EnableFields(enable);
+        }
+
+        public override void ClearFields(bool enable)
+        {
+            foreach (var text in layoutControl3.Controls)
+            {
+                if (text is TextEdit)
+                {
+                    (text as TextEdit).Text = string.Empty;
+                }
+            }
+
+            base.ClearFields(enable);
+        }
+
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        // This event is generated by Data Source Configuration Wizard
+        void entityInstantFeedbackSource1_GetQueryable(object sender, DevExpress.Data.Linq.GetQueryableEventArgs e)
+        {
+            // Instantiate a new DataContext
+            db = new MOHASEB.Model.MOHASEB_DBEntities();
+            // Assign a queryable source to the EntityInstantFeedbackSource
+            e.QueryableSource = db.tbl_Transforme_Stock_Type;
+            // Assign the DataContext to the Tag property,
+            // to dispose of it in the DismissQueryable event handler
+            e.Tag = db;
+        }
+
+        // This event is generated by Data Source Configuration Wizard
+        void entityInstantFeedbackSource1_DismissQueryable(object sender, DevExpress.Data.Linq.GetQueryableEventArgs e)
+        {
+            // Dispose of the DataContext
+            ((MOHASEB.Model.MOHASEB_DBEntities)e.Tag).Dispose();
+        }
+    }
+
+}

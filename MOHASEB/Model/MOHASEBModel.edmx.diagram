@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62cf546c9a28424a88e37a861327ba49" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Account" Width="1.5" PointX="10.5" PointY="41.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Accounts_Groups" Width="1.5" PointX="8.25" PointY="61.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Arguments_Accounts" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bill_Details" Width="1.5" PointX="12.75" PointY="35.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bill_Master" Width="1.5" PointX="10.5" PointY="12.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bill_TypeSet" Width="1.5" PointX="8.25" PointY="14.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bond_Details" Width="1.5" PointX="16.5" PointY="56.25" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bond_Header" Width="1.5" PointX="14.25" PointY="54.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Bond_Type" Width="1.5" PointX="12" PointY="66.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Buying_Command_Header" Width="1.5" PointX="13.5" PointY="25.25" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Buying_Commend_Details" Width="1.5" PointX="15.75" PointY="32.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Buying_Requests_Details" Width="1.5" PointX="15.75" PointY="35.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Buying_Requests_Header" Width="1.5" PointX="11.25" PointY="25.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Cash" Width="1.5" PointX="12" PointY="55.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Company" Width="1.5" PointX="8.25" PointY="57.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Cost_Calculation_TypeSet" Width="1.5" PointX="0.75" PointY="35.625" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Currency" Width="1.5" PointX="8.25" PointY="21.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Customer_Order_Details" Width="1.5" PointX="15" PointY="18.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Customer_Order_Header" Width="1.5" PointX="12.75" PointY="17.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Document_Type" Width="1.5" PointX="9.75" PointY="67.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Employee_Job" Width="1.5" PointX="5.25" PointY="40.625" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Groups" Width="1.5" PointX="3" PointY="35" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_In_Stock_Type" Width="1.5" PointX="5.25" PointY="50.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Item_Price" Width="1.5" PointX="12.75" PointY="60.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Items" Width="1.5" PointX="5.25" PointY="33.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Items_Settings" Width="1.5" PointX="7.5" PointY="39.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Items_Type" Width="1.5" PointX="3" PointY="31.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Journal_Details" Width="1.5" PointX="12.75" PointY="43.625" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Journal_Header" Width="1.5" PointX="12" PointY="49.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Orders_Stock_Details" Width="1.5" PointX="18.75" PointY="42" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Orders_Stock_Header" Width="1.5" PointX="7.5" PointY="48.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Out_Stock_Type" Width="1.5" PointX="5.25" PointY="48.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Package_of_Items_Units" Width="1.5" PointX="8.25" PointY="27.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Pay_Type" Width="1.5" PointX="8.25" PointY="12.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Period_Details" Width="1.5" PointX="12" PointY="69.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Period_Master" Width="1.5" PointX="9.75" PointY="64.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Person" Width="1.5" PointX="10.5" PointY="28.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Person_Phone_No" Width="1.5" PointX="12.75" PointY="6.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Person_tbl_Customer" Width="1.5" PointX="8.25" PointY="18.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Person_tbl_Employees" Width="1.5" PointX="7.5" PointY="44" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Person_tbl_Vender" Width="1.5" PointX="12.75" PointY="29.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Price_View_Details" Width="1.5" PointX="12.75" PointY="32.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Price_View_Header" Width="1.5" PointX="10.5" PointY="19.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Relation_Groups_AccountsSet" Width="1.5" PointX="8.25" PointY="35.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Relation_Items_Package_Unite" Width="1.5" PointX="10.5" PointY="33.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Return_Bill_Dtl" Width="1.5" PointX="15" PointY="13.625" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Return_Bill_Mst" Width="1.5" PointX="12.75" PointY="13.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Return_Orders_Stock_Details" Width="1.5" PointX="15.75" PointY="47.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Return_Orders_Stock_Header" Width="1.5" PointX="9.75" PointY="54.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Settel_Type" Width="1.5" PointX="13.5" PointY="22.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Settelment_Stock_Details" Width="1.5" PointX="18" PointY="38.875" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Settelment_Stock_Header" Width="1.5" PointX="15.75" PointY="44.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_SSN_IdentitySet" Width="1.5" PointX="15.75" PointY="28" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_SSN_TypeSet" Width="1.5" PointX="13.5" PointY="3.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Stocking_Details" Width="1.5" PointX="12.75" PointY="38.375" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Stocking_Header" Width="1.5" PointX="10.5" PointY="60.625" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Store" Width="1.5" PointX="5.25" PointY="43.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_System_Records" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Transforme_Stock_Type" Width="1.5" PointX="11.25" PointY="9.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Transforms_Stock_Details" Width="1.5" PointX="15.75" PointY="38.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Transforms_Stock_Header" Width="1.5" PointX="13.5" PointY="9.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Unit_Stock_Type" Width="1.5" PointX="8.25" PointY="30.125" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_Unit_Type" Width="1.5" PointX="6" PointY="30.5" />
+        <EntityTypeShape EntityType="MOHASEB_ACCOUNTING_DBModel.tbl_User" Width="1.5" PointX="9.75" PointY="50.25" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Account_tbl_Accounts_Groups" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Account_tbl_Currency" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Accounttbl_Company" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Cashtbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Details_tbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Persontbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Relation_Groups_AccountsSet_tbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Settelment_Stock_Header_tbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Storetbl_Account" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bill_Details_tbl_Bill_Master" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bill_Detailstbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bill_Mastertbl_Pay_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bill_Mastertbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bill_Typetbl_Bill_Master" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Return_Bill_Mst_tbl_Bill_Master" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bond_Detailstbl_Bond_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bond_Header_tbl_Bond_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Bond_Header_tbl_Cash" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Buying_Command_Header_tbl_Buying_Requests_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Buying_Commend_Details_tbl_Buying_Commend_Details" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Buying_Commend_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Buying_Requests_Details_tbl_Buying_Requests" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Buying_Requests_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Cash_tbl_User" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Companytbl_Period_Master" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Cost_Calculation_Typetbl_Groups" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Details_tbl_Currency" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Price_View_tbl_Currency" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Customer_Order_Details_tbl_Customer_Order_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Customer_Order_Header_tbl_Price_View_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Header_tbl_Document" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Employees_tbl_Employee_Job" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Items_tbl_Groups" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Relation_Groups_Accountstbl_Groups" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_In_Stock_Typetbl_Orders_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Item_Pricetbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Items_Settingstbl_Items" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Items_tbl_Items_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Relation_Items_Package_Unite_tbl_Items" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Details_tbl_Journal_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Header_tbl_Period_Master" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Journal_Header_tbl_User" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Orders_Stock_Details_tbl_Orders_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Orders_Stock_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Orders_Stock_Headertbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Orders_Stock_Headertbl_Stock" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Out_Stock_Typetbl_Orders_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Return_Orders_Stock_Headertbl_Orders_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Relation_Items_Package_Unite_tbl_Package_of_Items_Units" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Period_Mastertbl_Period_Details" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Customer_inherits_tbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Employees_inherits_tbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Person_Phone_Notbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Persontbl_SSN_Identity" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Vender_inherits_tbl_Person" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Price_View_tbl_Customer" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Storetbl_Employees" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Usertbl_Employees" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Price_View_Detailstbl_Price_View_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Price_View_Detailstbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Relation_Items_Package_Unite_tbl_Unit_Stock_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Return_Orders_Stock_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Settelment_Stock_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Stocking_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Transforms_Stock_Details_tbl_Relation_Items_Package_Unite" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Return_Bill_Dtl_tbl_Return_Bill_Mst" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Return_Orders_Stock_Details_tbl_Return_Orders_Stock" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Settel_Typetbl_Settelment_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Settelment_Stock_Details_tbl_Settelment_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_SSN_Identitytbl_SSN_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Stocking_Details_tbl_Stocking" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Transforme_Stock_Typetbl_Transforms_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Transforms_Stock_Details_tbl_Transforms_Stock_Header" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.FK_tbl_Unit_Stock_Type_tbl_Unit_Type" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.tbl_Groupstbl_Stock" />
+        <AssociationConnector Association="MOHASEB_ACCOUNTING_DBModel.tbl_Relation_Items_Package_Unitetbl_Vender" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
